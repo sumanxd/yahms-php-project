@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdowns</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<section class="container-fluid">
+		<div class="container">
+			<div class="row">
+	
+				<a class="toggleMenu" href="#">Menu</a>
+				<center>
+					<ul class="nav">
+						<li><a href="#">HOME</a></li>
+						<li  class="test">
+							<a href="#">District Profile</a>
+								<ul>
+									<li>
+										<a href="#">About Us</a>
+										<!-- <ul>
+											<li><a href="cattle.php">Cattle</a></li>
+											<li><a href="buffalo.php">Buffalo</a></li>
+											<li><a href="sheep.php">Sheep & Goat</a></li>
+											<li><a href="poultry.php">Poultry</a></li>
+											<li><a href="dogs.php">Dogs</a></li>
+											<li><a href="cats.php">Cats</a></li>
+											<li><a href="horses.php">Horses</a></li>
+											<li><a href="#">Others</a></li>
+										</ul> -->
+									</li>
+									<li><a href="deworming.php">Objectives</a></li>
+									<li><a href="castrations.php">Staff Position</a></li>
+									<li><a href="vaccinations.php">No Of Veterinary Institutes</a></li>
+									<li><a href="ai.php">Performance Of The District</a></li>
+									<li><a href="fodder.php">Livestock Population</a></li>
+									<li><a href="calf.php">Core Indicators</a></li>
+									<li><a href="fertilitycamps.php">Schemes</a></li>
+									<li><a href="farmerawarness.php">Any Others</a></li>
+									
+									
+								</ul>
+						</li>
+						<!-- <li><a href="#">Monthly Progressive Reports</a></li> -->
+						
+						<li><a href="#"></a></li>
+						<!-- <li><a href="#">Administrative Works</a></li> -->
+						<li><a href="#">Functional Indicators</a>
+							<ul>
+								<li><a href="#">Curative Treatment</a>
+									<ul>
+										<li><a href="FI/cattle.php">Cattle</a></li>
+										<li><a href="FI/buffalo.php">Buffalo</a></li>
+										<li><a href="FI/sheepgoat.php">Sheep & Goat</a></li>
+										<li><a href="FI/poultry.php">Poultry</a></li>
+										<li><a href="FI/dogs.php">Dogs</a></li>
+										<li><a href="FI/cats.php">Cats</a></li>
+										<li><a href="FI/horses.php">Horses</a></li>
+										<li><a href="#">Others</a></li>
+									</ul>
+								</li>
+								<li><a href="FI/deworming.php">Preventive Deworming</a> </li>
+								<li><a href="FI/castrations.php">Castrations</a> </li>
+								<li><a href="FI/vaccinations.php">Vaccinations</a> </li>
+								<li><a href="FI/ai.php">Artificial Insemination(AI)</a> </li>
+								<li><a href="FI/fodderdevlopment.php">Fodder Devlopment</a> </li>
+								<li><a href="FI/calf.php">Calf Births</a> </li>
+								<li><a href="FI/fertilitycamps.php">Fertility Camps</a> </li>
+								<li><a href="FI/farmerawarness.php">Farmer Awarness</a> </li>
+								<li><a href="FI/extensionprograms.php">Extension Programs</a> </li>
+								
+							</ul>
+						</li>
+						<li><a href="#">Core Indicators</a>
+							
+						</li>
+						<li><a href="#">Welfare Schemes</a>
+							<ul>
+								<li><a href="#">Sheep</a>
+									<ul>
+										<li><a href="WS/postgrounding.php">Post Grounding</a> </li>
+										<li><a href="WS/grounding.php">Grounding</a></li>
+										<li> <a href="WS/pregrounding.php">Pre Grounding</a></li>
+										
+									</ul>
+								</li>
+								<li><a href="#">Fodder Seed</a>
+									<ul>
+										<li><a href="WS/fodder/indent">Indent From The Field</a> </li>
+										<li><a href="WS/fodder/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Chaff Cutter</a>
+									<ul>
+										<li><a href="WS/chaff/indent">Indent From The Field</a> </li>
+										<li><a href="WS/chaff/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Back Yard Poultry</a>
+									<ul>
+										<li><a href="WS/back/indent">Indent From The Field</a> </li>
+										<li><a href="WS/back/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sunandini calf-Milk Program</a>
+									<ul>
+										<li><a href="WS/sunandini/indent">Indent From The Field</a> </li>
+										<li><a href="WS/sunandini/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Miltch Animals</a>
+									<ul>
+										<li><a href="WS/miltch/indent">Indent From The Field</a> </li>
+										<li><a href="WS/miltch/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Piggeries</a>
+									<ul>
+										<li><a href="WS/pig/indent">Indent From The Field</a> </li>
+										<li><a href="WS/pig/payment">Payment Particulars</a></li>
+									</ul>
+								</li>
+								
+							</ul>
+						</li>
+						<li><a href="#">Success Stories</a></li>
+						<li><a href="#">ADMIN</a></li>
+						
+						
+					</ul>
+				</center>
+			</div>
+		</div>
+		
+	</section>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

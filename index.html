@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YAHMS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+	  .nav>li>a {
+		position: relative;
+		display: block;
+		padding: 10px 16px;
+				}
+				footer {
+    background-color: rgba(44, 62, 80, 1.0);
+
+    width: 100%;
+    bottom: 0;
+    font-weight: lighter;
+    color: white;
+}
+.footerHeader{
+    width:100%;
+    padding:1em;
+    background-color:rgba(52, 73, 94,1.0);
+    text-align:center;
+    color:white;
+}
+footer h3{
+    font-weight:lighter;
+}
+footer ul{
+    padding-left:5px;
+    list-style:none;
+}
+footer p{
+    text-align : justify;
+    font-size : 12px;
+}
+footer iframe {
+    width:100%;
+    position:relative;
+    height:170px;
+}
+.sm{
+    list-style:none;
+    overflow:auto;
+}
+.sm li {
+    display: inline;
+    padding:5px;
+    float:left;
+} 
+.sm li a img {
+    width:32px;
+}
+				/*
+inspired from http://codepen.io/Rowno/pen/Afykb
+& https://jsfiddle.net/q0rgL8ws/
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+    overflow:hidden;
+}
+.item.active img {
+    transition: transform 5000ms linear 0s;
+    /* This should be based on your carousel setting. For bs, it should be 5second*/
+    transform: scale(1.05, 1.05);
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+</style>
+</head>
+<body>
+	<section class="container-fluid">
+		<div class="container-fluid">
+			<div class="row">	
+				<a class="toggleMenu" href="#">Menu</a>
+				<center>
+					<ul class="nav">
+						<li><a href="">HOME</a></li>
+						<li  class="test">
+							<a href="projectnew.php">District Profile</a>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="deworming.php">Objectives</a></li>
+									<li><a href="castrations.php">Staff Position</a></li>
+									<li><a href="vaccinations.php">No Of Veterinary Institutes</a></li>
+									<li><a href="ai.php">Performance Of The District</a></li>
+									<li><a href="fodder.php">Livestock Population</a></li>
+									<li><a href="calf.php">Core Indicators</a></li>
+									<li><a href="fertilitycamps.php">Schemes</a></li>
+									<li><a href="farmerawarness.php">Any Others</a></li>
+								</ul>
+						</li>						
+						<li><a href="#">Functional Indicators</a>
+							<ul>
+								<li><a href="#">Curative Treatment</a>
+									<ul>
+										<li><a href="FI/cattle.php">Cattle</a></li>
+										<li><a href="FI/buffalo.php">Buffalo</a></li>
+										<li><a href="FI/sheepgoat.php">Sheep & Goat</a></li>
+										<li><a href="FI/poultry.php">Poultry</a></li>
+										<li><a href="FI/dogs.php">Dogs</a></li>
+										<li><a href="FI/cats.php">Cats</a></li>
+										<li><a href="FI/horses.php">Horses</a></li>
+										<li><a href="#">Others</a></li>
+									</ul>
+								</li>
+								<li><a href="FI/deworming.php">Preventive Deworming</a> </li>
+								<li><a href="FI/castrations.php">Castrations</a> </li>
+								<li><a href="FI/vaccinations.php">Vaccinations</a> </li>
+								<li><a href="FI/ai.php">Artificial Insemination(AI)</a> </li>
+								<li><a href="FI/fodderdevlopment.php">Fodder Devlopment</a> </li>
+								<li><a href="FI/calf.php">Calf Births</a> </li>
+								<li><a href="FI/fertilitycamps.php">Fertility Camps</a> </li>
+								<li><a href="FI/farmerawarness.php">Farmer Awarness</a> </li>
+								<li><a href="FI/extensionprograms.php">Extension Programs</a> </li>
+								
+							</ul>
+						</li>
+						<li><a href="coreindicators.php">Core Indicators</a></li>
+						<li><a href="#">Welfare Schemes</a>
+							<ul>
+								<li><a href="#">Sheep</a>
+									<ul>
+										<li><a href="WS/postgrounding.php">Post Grounding</a> </li>
+										<li><a href="WS/grounding.php">Grounding</a></li>
+										<li> <a href="WS/pregrounding.php">Pre Grounding</a></li>
+										
+									</ul>
+								</li>
+								<li><a href="#">Fodder Seed</a>
+									<ul>
+										<li><a href="WS/fodder/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/fodder/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Chaff Cutter</a>
+									<ul>
+										<li><a href="WS/chaff/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/chaff/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Back Yard Poultry</a>
+									<ul>
+										<li><a href="WS/back/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/back/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sunandini calf-Milk Program</a>
+									<ul>
+										<li><a href="WS/sunandini/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/sunandini/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Miltch Animals</a>
+									<ul>
+										<li><a href="WS/miltch/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/miltch/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Piggeries</a>
+									<ul>
+										<li><a href="WS/pig/indent.php">Indent From The Field</a> </li>
+										<li><a href="WS/pig/payment.php">Payment Particulars</a></li>
+									</ul>
+								</li>								
+							</ul>
+						</li>
+						<li><a href="suggestion.php">Suggestion(Collecter)</a></li>
+						<li><a href="asuggestion.php">Suggestion(Admin)</a></li>
+						<li><a href="#">Success Stories</a></li>
+						<li><a href="#">Log In</a>
+							<ul>
+								<li><a href="collecter/login.php">Collector</a></li>
+								<li><a href="admin/login.php">Admin</a></li>
+								<li><a href="mandaladmin/login.php">Mandal Admin</a></li>
+								<li><a href="#">Ad/AH</a></li>
+							</ul>
+						</li>
+					</ul>
+				</center>
+			</div>
+		</div>		
+	</section>
+<div class="container" style="max-width:100%;">
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner carousel-zoom">
+        <div class="active item"><img class="img-responsive" src="https://images.unsplash.com/photo-1419064642531-e575728395f2?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200">
+          <div class="carousel-caption">
+            <h2>Title</h2>
+            <p>Description</p>
+          </div>
+        </div>
+        <div class="item"><img class="img-responsive" src="https://images.unsplash.com/photo-1445280471656-618bf9abcfe0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200">
+          <div class="carousel-caption">
+            <h2>Title</h2>
+            <p>Description</p>
+          </div>
+        </div>
+        <div class="item"><img class="img-responsive" src="https://images.unsplash.com/photo-1445462657202-a0893228a1e1?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200">
+          <div class="carousel-caption">
+            <h2>Title</h2>
+            <p>Description</p>
+          </div>
+        </div>
+       </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#carousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#carousel" data-slide="next">›</a>
+</div>
+</div>
+<footer>
+    <div class="footerHeader" ></div>
+    <div class="container">
+		<div class="col-md-4" >
+		    <h3>About us</h3>
+		    <p>
+		        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		    </p>
+		</div>
+		
+		<div class="col-md-4">
+		    <h3>Our Location </h3>
+		    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433868.0837064906!2d35.66744174160663!3d31.836036762053016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1499168051085" sytle="" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+		<div class="col-md-4" >
+		    <h3>Contact Us</h3>
+		    <ul>
+		        <li>Phone : 123 - 456 - 789</li>
+		        <li>E-mail : info@comapyn.com</li>
+		        <li>Fax : 123 - 456 - 789</li>
+		    </ul>
+		    <p>
+		        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+		    </p>
+		    <ul class="sm">
+		        <li><a href="#" ><img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive"></a></li>
+		        <li><a href="#" ><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" class="img-responsive" ></a></li>
+		        <li><a href="#" ><img src="http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive"  ></a></li>
+		    </ul>
+		</div>
+    </div>
+</footer>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
